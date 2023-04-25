@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+section .info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  align-self: center;
+  height: 100%;
+  background-image: url("./images/img_1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card label {
+  font-size: 2rem;
+  color: #ffffff;
+  word-break: break-all;
+  text-align: center;
+  padding: 0rem 3rem;
+}
+
+.card {
+  display: inherit;
+  place-items: center;
+}
+
+.bg-blue {
+  background-color: #00c4cc;
+}
+
+.bg-pink {
+  background-color: #ff738e;
+}
+
+.bg-light-purple {
+  background-color: #a548ff;
+}
+
+.bg-purple {
+  background-color: #6422b8;
+}
+
+.bg-light-yellow {
+  background-color: #ffd93b;
+}
+
+.bg-yellow {
+  background-color: #ffa53b;
+}
+
+@media screen and (max-width: 1024px) {
+  .card label {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  section .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+
+  .box1 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+    background-position: top;
+  }
+
+  .box-last {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card label {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card label {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+  }
+}
